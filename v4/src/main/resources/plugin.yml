@@ -1,0 +1,10 @@
+name: "BoxMigrator"
+main: "net.okocraft.boxmigrator.BoxMigrator"
+version: "${projectVersion}"
+author: "Siroshun09"
+api-version: "1.17"
+depend: ["Box"]
+
+commands:
+  boxmigrate:
+    description: "Migrate data of Box from v3 database"
