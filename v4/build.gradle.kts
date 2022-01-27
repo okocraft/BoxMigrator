@@ -23,8 +23,8 @@ dependencies {
     implementation("com.zaxxer:HikariCP:5.0.0")
     implementation("com.github.siroshun09.configapi:configapi-yaml:4.5.0")
 
-    compileOnly("net.okocraft.box:api:4.1.0")
-    compileOnly("net.okocraft.box.feature:autostore:4.1.0")
+    compileOnly("net.okocraft.box:api:4.3.0")
+    compileOnly("net.okocraft.box:autostore:4.3.0")
     compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
     compileOnly("org.jetbrains:annotations:23.0.0")
 }
