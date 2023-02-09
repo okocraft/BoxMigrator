@@ -1,5 +1,3 @@
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 plugins {
     java
     id("com.github.johnrengelman.shadow") version "7.1.2"
@@ -29,15 +27,21 @@ dependencies {
     compileOnly("org.jetbrains:annotations:24.0.0")
 }
 
-tasks.named<Copy>("processResources") {
-    filesMatching("plugin.yml") {
-        expand("projectVersion" to project.version)
+tasks {
+    build {
+        dependsOn(shadowJar)
     }
-}
 
-tasks.named<ShadowJar>("shadowJar") {
-    minimize()
-    archiveFileName.set("BoxMigrator-${project.version}.jar")
-    relocate("com.zaxxer", "net.okocraft.boxmigrator.lib")
-    relocate("com.github.siroshun09", "net.okocraft.boxmigrator.lib")
+    processResources {
+        filesMatching("plugin.yml") {
+            expand("projectVersion" to project.version)
+        }
+    }
+
+    shadowJar {
+        minimize()
+        archiveFileName.set("BoxMigrator-${project.version}.jar")
+        relocate("com.zaxxer", "net.okocraft.boxmigrator.lib")
+        relocate("com.github.siroshun09", "net.okocraft.boxmigrator.lib")
+    }
 }
