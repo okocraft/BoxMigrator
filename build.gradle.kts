@@ -23,7 +23,7 @@ dependencies {
 
     compileOnly("net.okocraft.box:api:4.4.1")
     compileOnly("net.okocraft.box:autostore:4.4.1")
-    compileOnly("io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT")
     compileOnly("org.jetbrains:annotations:24.0.1")
 }
 
