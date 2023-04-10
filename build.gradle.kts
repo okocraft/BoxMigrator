@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     implementation("com.zaxxer:HikariCP:5.0.1")
-    implementation("com.github.siroshun09.configapi:configapi-yaml:4.6.3")
+    implementation("com.github.siroshun09.configapi:configapi-yaml:4.6.4")
 
     compileOnly("net.okocraft.box:api:4.4.1")
     compileOnly("net.okocraft.box:autostore:4.4.1")
